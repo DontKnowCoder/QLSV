@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/QLSV20240825234535/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsQLSVContext_7F21E27690",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/qlsvdbserver/databases/QLSV_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:QLSVContext"
+    }
+  }
+}

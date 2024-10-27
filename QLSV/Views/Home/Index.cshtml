@@ -1,0 +1,49 @@
+﻿@model IEnumerable<QLSV.Models.SV>
+
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Xin chào đến với website quản lý sinh viên</h1>
+</div>
+
+<div class="text-center">
+    <form asp-action="Index" method="get">
+        <div class="form-group">
+            <input type="text" name="searchQuery" class="form-control" placeholder="Tìm kiếm theo tên sinh viên..." />
+            <h2></h2>
+        </div>
+        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+    </form>
+
+    <h2>Danh sách sinh viên</h2>
+    @if (Model != null && Model.Any())
+    {
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Class</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.ID</td>
+                        <td>@student.Name</td>
+                        <td>@student.Dob</td>
+                        <td>@student.Class</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Không có sinh viên nào phù hợp với tìm kiếm.</p>
+    }
+</div>

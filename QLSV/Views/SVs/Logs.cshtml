@@ -1,0 +1,27 @@
+﻿@model IEnumerable<QLSV.Models.Log>
+
+<h2>Lịch sử chỉnh sửa</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Timestamp</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Class</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in Model)
+        {
+            <tr>
+                <td>@log.Timestamp</td>
+                <td>@log.Name</td>
+                <td>@log.Dob</td>
+                <td>@log.Class</td>
+                <td>@log.Action</td>
+            </tr>
+        }
+    </tbody>
+</table>
